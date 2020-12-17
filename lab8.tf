@@ -13,11 +13,11 @@ provider "aws" {
 
 # adds first bucket
 resource "aws_s3_bucket" "root_bucket" {
-    bucket = "${var.bucketname}"
+    bucket = var.bucketname
     acl = "public-read"
 
     tags = {
-      Name = "${var.bucketname}"
+      Name = var.bucketname
     }
 }
 
